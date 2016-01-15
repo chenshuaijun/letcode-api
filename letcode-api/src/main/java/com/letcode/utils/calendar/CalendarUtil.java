@@ -178,20 +178,4 @@ public class CalendarUtil {
 		}
 		return datetime;
 	}
-
-	/**
-	 * 使用测方法
-	 * 
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		// System.out.println("1." + formatDateTime("2015-08-19 23:23:12",
-		// "yyyy-mm-dd HH:mm:ss", "yyyy/mm/dd HHmmss"));
-		System.out.println("2." + getCurrentDateTime());
-		System.out.println("3." + getCurrentDateTime("yyyy-MM-dd"));
-		System.out.println("4." + getCurrentDateTime("HH:mm:ss"));
-		System.out.println("5." + getCurrentDateTime("yyyy:MM:dd HH-mm-ss"));
-		System.out.println("6." + formatDate(getCurrentDateTime("yyyyMMdd"), "yyyy-MM-dd"));
-		System.out.println("7." + getYesterdayDateTime("yyyy-MM-dd"));
-	}
 }
