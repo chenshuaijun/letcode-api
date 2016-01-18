@@ -2,7 +2,7 @@ package com.letcode.utils.calendar;
 
 import org.junit.Test;
 
-import cn.letcode.utils.calendar.CalendarUtil;
+import letcode.utils.calendar.CalendarUtil;
 
 /**
  * 日历工具类测试方法（junit测试）
