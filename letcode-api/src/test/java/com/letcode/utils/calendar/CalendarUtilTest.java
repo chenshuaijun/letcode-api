@@ -11,7 +11,7 @@ import org.junit.Test;
 public class CalendarUtilTest {
 
 	@Test
-	public static void test() {
+	public void test() {
 		System.out.println(
 				"1." + CalendarUtil.formatDateTime("2015-08-19 23:23:12", "yyyy-mm-dd HH:mm:ss", "yyyy/mm/dd HHmmss"));
 		System.out.println("2." + CalendarUtil.getCurrentDateTime());
