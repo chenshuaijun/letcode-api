@@ -41,7 +41,7 @@ public class CalendarUtil {
 	 * 获取当前时间 <br>
 	 * 默认格式 : yyyyMMddHHmmss
 	 * 
-	 * @return
+	 * @return String
 	 */
 	public static String getCurrentDateTime() {
 		Calendar cal = Calendar.getInstance();
@@ -52,7 +52,7 @@ public class CalendarUtil {
 	 * 获取昨日时间 <br>
 	 * 默认格式 : yyyyMMddHHmmss
 	 * 
-	 * @return
+	 * @return String
 	 */
 	public static String getYesterdayDateTime() {
 		return getYesterdayDateTime(defaultDateTimeFormat);
@@ -63,7 +63,7 @@ public class CalendarUtil {
 	 * 
 	 * @param format
 	 *            日期时间格式 例如：yyyyMMddHHmmss
-	 * @return
+	 * @return String
 	 */
 	public static String getYesterdayDateTime(String format) {
 		Calendar cal = getOffsetDay(-1);
@@ -88,7 +88,7 @@ public class CalendarUtil {
 	 * 
 	 * @param dateFormat
 	 *            日期时间格式 ，例如 ：yyyyMMddHHmmss
-	 * @return
+	 * @return String
 	 */
 	public static String getCurrentDateTime(String dateFormat) {
 		return formatDateTime(getCurrentDateTime(), defaultDateTimeFormat, dateFormat);
@@ -132,7 +132,7 @@ public class CalendarUtil {
 	 * 
 	 * @param date
 	 *            日期时间字符串
-	 * @param dateformat
+	 * @param dateFormat 
 	 *            日期格式，例如：yyyyMMdd
 	 * @return 默认格式
 	 */
@@ -159,7 +159,7 @@ public class CalendarUtil {
 	 * 
 	 * @param datetime
 	 *            日期时间字符串
-	 * @param dateformat
+	 * @param dateFormat
 	 *            日期格式：yyyyMMdd
 	 * @return 默认格式
 	 */
@@ -176,7 +176,7 @@ public class CalendarUtil {
 	 *            原数据格式
 	 * @param newFormat
 	 *            新数据格式
-	 * @return 目标字符串
+	 * @return 目标格式
 	 */
 	public static String formatDateTime(String datetime, String oldFormat, String newFormat) {
 		Date date;
