@@ -22,27 +22,28 @@
 		<name>letcode</name>
 		<url>www.letcode.cn</url>
 	</organization>
-	
-	
+
+
 	<licenses>
 		<license>
 			<name>The Apache Software License, Version 2.0</name>
 			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
 		</license>
 	</licenses>
-	
+
 	<developers>
 		<developer>
 			<name>chensj</name>
 			<email>chensj@letcode.cn</email>
 		</developer>
 	</developers>
-	
+
 	<!-- 设置编译级别 -->
 	<properties>
 		<project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
-	</properties><build>
+	</properties>
+	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -124,5 +125,21 @@
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.4</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.10</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4.7</version>
+		</dependency>
+
 	</dependencies>
 </project>
