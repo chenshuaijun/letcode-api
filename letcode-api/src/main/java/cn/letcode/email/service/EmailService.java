@@ -43,8 +43,9 @@ public class EmailService {
 	 *            邮件主题
 	 * @param content
 	 *            邮件内容
-	 * @return
+	 * @return boolean 发送成功 true 否则 false
 	 * @throws Exception
+	 *             处理异常
 	 */
 	public boolean sendEmail(String toAddr, String subJect, String content) throws Exception {
 		email.setSubject(subJect);
@@ -65,8 +66,9 @@ public class EmailService {
 	 *            邮件内容
 	 * @param type
 	 *            发送邮件类型
-	 * @return
+	 * @return boolean 发送成功 true 否则 false
 	 * @throws Exception
+	 *             发送异常
 	 */
 	public boolean sendEmail(String toAddr, String subJect, String content, String type) throws Exception {
 		email.setSubject(subJect);
@@ -95,8 +97,9 @@ public class EmailService {
 	 *            发送邮件类型
 	 * @param files
 	 *            需要发送的多个文件
-	 * @return
+	 * @return boolean 发送成功 true 否则 false
 	 * @throws Exception
+	 *             发送异常
 	 */
 	public boolean sendEmail(String toAddr, String subJect, String content, String type, File[] files)
 			throws Exception {
@@ -128,8 +131,9 @@ public class EmailService {
 	 *            发送邮件类型 (HTML/TEXT)
 	 * @param file
 	 *            需要发送的单个文件
-	 * @return
+	 * @return boolean 发送成功 true 否则 false
 	 * @throws Exception
+	 *             发送异常
 	 */
 	public boolean sendEmail(String toAddr, String subJect, String content, String type, File file) throws Exception {
 		email.setSubject(subJect);
@@ -148,10 +152,12 @@ public class EmailService {
 	}
 
 	/**
-	 * 以文本格式发送邮件<步骤处理流程>
+	 * 以文本格式发送邮件
 	 *
 	 * @param mail
 	 *            发送邮件的内容和信息
+	 * 
+	 * @return boolean 发送成功 true 否则 false
 	 */
 	public boolean sendTextMail(Email mail) {
 
@@ -183,7 +189,7 @@ public class EmailService {
 	 *
 	 * @param mail
 	 *            待发送的邮件信息
-	 * @return boolean
+	 * @return boolean 发送成功 true 否则 false
 	 */
 	public boolean sendHtmlMail(Email mail) {
 		Session mSession = null;
@@ -215,7 +221,7 @@ public class EmailService {
 	 *
 	 * @param mail
 	 *            发送邮件Bean
-	 * @return
+	 * @return Session 登陆邮箱session
 	 */
 	public Session getMailSession(Email mail) {
 		Authenticator authenticator = null;
@@ -241,6 +247,7 @@ public class EmailService {
 	 *            mail实例
 	 * @return Message 邮件发送主题内容
 	 * @throws Exception
+	 *             发送异常
 	 */
 	public Message getMimeMessage(Session mSession, Email mail) throws Exception {
 		Message msg = null;
@@ -296,7 +303,7 @@ public class EmailService {
 
 	/**
 	 * 获取收件人地址 <br>
-	 * <b>邮件地址规则 陈帅军<chensj@letcode.cn>,陈帅军<chensj_blue@qq.com> </b>
+	 * <b>邮件地址规则 陈帅军&lt;chensj@letcode.cn&gt;,陈帅军&lt;chensj_blue@qq.com&gt; </b>
 	 *
 	 * @param toAddress
 	 *            需要发送邮件地址数组
@@ -329,8 +336,10 @@ public class EmailService {
 	 * 获取转码后的邮件地址
 	 *
 	 * @param addr
-	 * @return
+	 *            发送邮件地址
+	 * @return String 使用MimeUtility.encodeWord转义后的地址
 	 * @throws UnsupportedEncodingException
+	 *             未知编码异常
 	 */
 	public String getMimeEcodeAddr(String addr) throws UnsupportedEncodingException {
 		return MimeUtility.encodeWord(addr.substring(0, addr.indexOf('<'))) + addr.substring(addr.indexOf('<'));

@@ -42,6 +42,8 @@ public class Email {
 
 	/**
 	 * 获得邮件会话属性
+	 * 
+	 * @return Properties
 	 */
 	public Properties getProperties() {
 		Properties p = new Properties();
