@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>cn.letcode</groupId>
 	<artifactId>letcode-api</artifactId>
-	<version>1.0.1-RELEASE</version>
+	<version>1.0.2</version>
 	<url>https://github.com/chenshuaijun/letcode-api</url>
 	<name> API工具类</name>
 	<description>java 代码 API工具类</description>
