@@ -16,16 +16,30 @@ public class FileUtil {
 	 * @param file
 	 *            需要删除的文件或者文件夹
 	 */
-	public static void deleteLongFile(File file) {
+	public static void deleteFiles(File file) {
 		if (file.isDirectory()) {
 			File[] lf = file.listFiles();
 			for (File f : lf)
-				deleteLongFile(f);
-			System.out.println(file.getAbsolutePath());
+				deleteFiles(f);
 			file.delete();
 		} else {
-			System.out.println(file.getAbsolutePath());
 			file.delete();
 		}
+	}
+
+	/**
+	 * 
+	 * TODO 将文件转移到另外一个目录,支持目录转移
+	 * 
+	 * @param srcFile
+	 *            转移前文件
+	 * @param desFile
+	 *            转移后文件
+	 */
+	public static void moveFiles(File src, File dest) {
+		if (src.isDirectory()) {
+
+		}
+		src.renameTo(dest);
 	}
 }
