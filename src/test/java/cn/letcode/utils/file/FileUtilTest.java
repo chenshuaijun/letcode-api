@@ -17,14 +17,6 @@ public class FileUtilTest {
 
 	}
 
-	public static void testRemoveFile() {
-		String src = "D:\\workspaces\\kayak";
-		String des = "E:\\workspaces\\kayak";
-		File srcfile = new File(src);
-		File desfile = new File(des);
-		FileUtil.moveFiles(srcfile, desfile);
-	}
-
 	/**
 	 * 测试删除文件
 	 */
